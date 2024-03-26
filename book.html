@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Library</title>
+    <link rel="stylesheet" href="book.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;display=swap" rel="stylesheet">
+    <script type="module" src="book.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <p>library</p>
+        </div>
+        <div class="content">
+            <div class="add">
+                <button class="add-btn">Add book</button>
+            </div>
+            <dialog>
+                <form action="#" method="post">
+                <div class="dialog-content">
+                        <p class="add-text">Add new book</p>
+                        <input required class="field input-title" name="title" type="text" placeholder="Title*">
+                        <input required class="field input-author" name="author" type="text" placeholder="Author*">
+                        <input required class="field input-pages" name="pages" type="number" placeholder="Pages*">
+                        <div class="huri">
+                            <p>Have you read it?</p>
+                            <input class="check" type="checkbox">
+                        </div>
+                        <button class="submit" type="submit">Submit</button>
+                </div>
+                </form>
+            </dialog>
+            <div class="books">
+            </div>
+        </div>
+        <div class="footer">
+            <p>Attempt to copy this <a target='_blank' href="https://michalosman.github.io/library/">amazing library</a></p>
+        </div>
+    </div>
+</body>
+</html>
