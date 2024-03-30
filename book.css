@@ -76,6 +76,10 @@ dialog[open] {
     animation: popup 0.25s ease-out forwards;
 }
 
+input:invalid {
+    box-shadow: 0 0 5px 1px red;
+}
+
 .dialog-content {
     padding: 16px;
     display: flex;

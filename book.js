@@ -1,12 +1,8 @@
 "use strict";
 
-
-// import {createBook, eraseLibrary, openModal, removeParent, switchColor} from "./func.js";
 const addBtn = document.querySelector('.add-btn')
 const dialog = document.querySelector('dialog')
 const submitBtn = document.querySelector('.submit')
-const removeBtn = document.querySelector('.remove')
-const readBtn = document.querySelector('.read')
 const author = document.querySelector('.input-author')
 const title = document.querySelector('.input-title')
 const pages = document.querySelector('.input-pages')
@@ -15,7 +11,6 @@ const checkbox = document.querySelector('.check')
 const myLibrary = []
 
 class Book{
-
     constructor(title, author, pages, checkbox) {
         this.title = title;
         this.author = author;
@@ -81,14 +76,14 @@ function eraseLibrary(library) {
     }
 }
 
-submitBtn.addEventListener('click', (event) => {
+document.querySelector('form').addEventListener('submit', (event) => {
     eraseLibrary(bookLib)
     event.preventDefault();
     let book = new Book(title.value, author.value, pages.value, checkbox.checked)
     myLibrary.push(book)
     console.log(myLibrary)
     addToLibrary(myLibrary, bookLib)
-    dialog.close(pages.value)
+    dialog.close()
 })
 
 function addToLibrary(bookArray, bookLib) {
